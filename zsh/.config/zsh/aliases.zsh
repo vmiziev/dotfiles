@@ -64,3 +64,12 @@ alias stream='mpv av://v4l2:/dev/video4 --fullscreen --demuxer-lavf-o=input_form
 # =======================
 
 alias nf='neofetch'
+
+# =========================================================
+# Docker
+# =========================================================
+
+# POSTGRES
+alias pg-start='docker compose -f ~/.config/docker/postgres/compose.yaml up -d'
+alias pg-stop='docker compose -f ~/.config/docker/postgres/compose.yaml down'
+alias pg-logs='docker compose -f ~/.config/docker/postgres/compose.yaml logs -f'
