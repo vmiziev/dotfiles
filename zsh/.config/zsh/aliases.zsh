@@ -8,7 +8,13 @@ alias ll='eza -lh --icons --git'
 alias la='eza -lah --icons --git'
 
 # Tree view
-alias tree='eza --tree --icons'
+# alias tree='eza --tree --icons'
+tree() {
+    # Level fallback: Use first argument if provided, otherwise default to 2
+    local level="${1:-2}"
+    
+    eza --tree --all --level="$level" --no-git --ignore-glob="node_modules" --group-directories-first
+}
 
 # Reuse ls completions for eza (avoids defining a separate completion function)
 compdef eza=ls
