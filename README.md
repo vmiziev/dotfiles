@@ -1,9 +1,5 @@
 # GNU Stow — Dotfiles Quick Reference
 
-`~/.dotfiles` is the source repo. Stow creates symlinks from there into `~`.
-
----
-
 ## How it works
 
 Each subdirectory in `~/.dotfiles` is a **package**. Stow mirrors its structure into the target directory (`~` by default), creating symlinks.
@@ -50,12 +46,11 @@ stow zsh
 
 ## Useful flags
 
-| Flag               | Purpose                                         |
-| ------------------ | ----------------------------------------------- |
-| `stow -n zsh`      | Dry run — show what _would_ be linked           |
-| `stow -R zsh`      | Re-stow (delete + re-create symlinks)           |
-| `stow -D zsh`      | Delete (un-stow) a package                      |
-| `stow --adopt zsh` | Move existing files into the package, then stow |
+| Flag          | Purpose                               |
+| ------------- | ------------------------------------- |
+| `stow -n zsh` | Dry run — show what _would_ be linked |
+| `stow -R zsh` | Re-stow (delete + re-create symlinks) |
+| `stow -D zsh` | Delete (un-stow) a package            |
 
 ---
 
