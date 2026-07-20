@@ -12,7 +12,7 @@ alias la='eza -lah --icons --git'
 tree() {
     # Level fallback: Use first argument if provided, otherwise default to 2
     local level="${1:-2}"
-    
+
     eza --tree --all --level="$level" --no-git --ignore-glob="node_modules" --group-directories-first
 }
 
